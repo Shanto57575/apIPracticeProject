@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center text-4xl my-5 underline">Welcome to the country</h1>
+    </header>
+    <main>
+        <section id="spinner" class="hidden">
+            <div class="flex items-center justify-center">
+                <div
+                  class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                  role="status">
+                  <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)">Loading...
+                 </span>
+                </div>
+            </div>
+        </section>
+        <section id="showAllCountry" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-12 my-5">
+        </section>
+        <section>
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal" id="showDetailsById">
+    
+            </div>
+        </section>
+    </main>
+    <footer class="text-center my-4">
+        <button id="showButton" onclick="showAllButton()" class="btn">Show All</button>
+    </footer>
+    <script src="./js/countries.js"></script>
+</body>
+
+</html>
